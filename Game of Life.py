@@ -65,7 +65,7 @@ def pause(p):
 
 
 def display():
-    L=Lafter #bizzare
+    L=Lafter #bizzare, je crois que ca devrait etre supprime
     for k in range(0,10):
         i=10*k
         Lk=[]
