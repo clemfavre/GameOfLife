@@ -13,6 +13,7 @@ import time
 
 # defdeparture
 grid=[[0,0,1,0,0,1,0,0,0,0,0,0],[0,1,1,1,1,0,1,0,0,0,0,0],[0,1,0,0,1,1,0,1,0,1,1,0],[0,1,1,0,0,1,0,0,0,1,0,0],[0,1,0,0,1,0,1,0,0,1,1,0],[0,0,0,1,1,0,0,0,0,1,0,0],[0,0,0,0,1,0,1,0,1,0,1,0],[0,1,0,1,0,0,0,0,0,0,0,0],[0,0,1,1,1,0,1,1,0,1,0,0],[0,0,0,1,1,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0]]
+newgrid=grid
 lines=10 # without the last line that is full of dead cells and that doesn't change of state
 columns=10 # without the first and the last columns that are full of dead cells and that don't change of state
 # more visually
@@ -31,6 +32,7 @@ columns=10 # without the first and the last columns that are full of dead cells 
 
 
 def nextstep():
+    grid=newgrid
     for i in range(0,lines):
         for j in range(1,columns+1):
             cells=0
@@ -51,10 +53,10 @@ def nextstep():
             if grid[i+1][j+1]==1:
                 cells=cells+1
             if cells<2 or cells>3:
-                grid[i][j]=0
+                newgrid[i][j]=0
             if cells==3:
-                grid[i][j]=1
-    return(grid)
+                newgrid[i][j]=1
+    return(newgrid)
 #print(nextstep())
 
 
