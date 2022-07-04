@@ -67,8 +67,8 @@ def pause(p):
 
 
 def display():
-    for k in range(0,lines+1):
-        print(grid[k])
+    for k in range(0,lines):
+            print(grid[k]) #I want to print each line from indice 1 to indice 10 only to delet the first and the last columns that are alway equal to 0
     print("space")
 #display()
 
