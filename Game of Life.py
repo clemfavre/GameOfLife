@@ -8,7 +8,7 @@ Created on Tue May 31 22:26:07 2022
 from math import*
 from colorama import Fore,Style
 import time
-#import os
+import os
 from subprocess import call
 
 
@@ -74,12 +74,12 @@ def display():
 #display()
 
 def clear():
-    call("clear")
-    #os.system("cls")
+    #call("clear")
+    os.system("cls")
 
 def main():
     n=int(input("Number of steps : "))
-    p=int(input("Timelimit : "))
+    p=float(input("Timelimit : "))
     for k in range(0,n):
         clear()
         display()
